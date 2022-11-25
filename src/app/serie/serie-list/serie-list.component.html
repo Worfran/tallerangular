@@ -39,6 +39,7 @@
       </table>
     </div>
     <div class="col-6" *ngIf="selected">
+      <button type="button" class="btn-close" disabled aria-label="Close" (click)="undoSelect()"></button>
       <app-serie-detail [serie]="selectedSerie"></app-serie-detail>
     </div>
   </div>
