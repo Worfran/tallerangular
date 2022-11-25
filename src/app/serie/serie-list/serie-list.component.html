@@ -14,7 +14,9 @@
           <td>
             <dd>{{c.id}}</dd>
           </td>
-          <td>
+          <td
+          (click)="select(c)"
+          >
             <dd>{{c.name}}</dd>
           </td>
           <td>
@@ -24,7 +26,18 @@
             <dd>{{c.seasons}}</dd>
           </td>
         </tr>
+        <tr>
+          <td>
+            <dd>Season Avarage</dd>
+          </td>
+          <td>
+            <dd>{{promedio()}}</dd>
+          </td>
+        </tr>
       </tbody>
     </table>
+  </div>
+  <div class="col-6" *ngIf="selected">
+    <app-serie-detail [serie]="selectedSerie"></app-serie-detail>
   </div>
 </div>
