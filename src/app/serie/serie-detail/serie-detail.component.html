@@ -1,31 +1,13 @@
-<p class="h3 p-3">{{ serie.name }}</p>
-  <div class="row">
-    <div class="col-2">
-      <div class="thumb">
-        <img
-          class="img-fluid"
-          src="{{ serie.poster}}"
-          alt="{{ serie.name }}"
-        />
-    </div>
-  </div>
-  <div class="col">
-    <dl>
-      <dt class="bold">Description</dt>
-      <dd class="caption" >
-        {{ serie.description }}
-      </dd>
-
-      <hr />
-
-      <dt class="bold">Channel</dt>
-      <dd>{{ serie.channel }}</dd>
-
-      <hr />
-
-      <dt class="bold">Webpage</dt>
-      <dd>{{serie.webpage}}</dd>
-
-    </dl>
+<div class="card" style="width: 18rem;">
+  <img
+  src="{{serie.poster}}"
+  class="card-img-top"
+  alt="{{serie.name}}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">{{serie.name}}</h5>
+    <p class="card-text">{{serie.description}} </p>
+    <a href="{{serie.webpage}}" class="btn btn-primary">web page</a>
   </div>
 </div>
+

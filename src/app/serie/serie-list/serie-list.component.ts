@@ -38,6 +38,10 @@ export class SerieListComponent implements OnInit {
     this.selectedSerie = serie;
   }
 
+  undoSelect(): void{
+    this.selected = false;
+  }
+
   ngOnInit() {
     this.getSeries();
   }
